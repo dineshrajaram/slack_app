@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Dce-Automation" tests="10" errors="0" failures="5" skipped="0" time="5.887">
-<testcase classname="Dce-Automation.Tests.Develop" name="Create Pages to Delete or Publish" time="5.391">
+<testsuite name="Dce-Automation" tests="3" errors="0" failures="1" skipped="0" time="0.378">
+<testcase classname="Dce-Automation.Tests.Develop" name="Test1" time="0.001">
+</testcase>
+<testcase classname="Dce-Automation.Tests.Develop" name="Test2" time="0.000">
+<failure message="AssertionError" type="AssertionError"></failure>
+</testcase>
+<testcase classname="Dce-Automation.Tests.Develop" name="test3" time="0.001">
 </testcase>
 </testsuite>
