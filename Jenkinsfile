@@ -16,7 +16,7 @@ def notifySlack(total,passed,failed){
 				"fields": [
 					[
 						"type": "mrkdwn",
-						"text": "*Environment\t\t:* \t $env.RUN_TESTS_DISPLAY_URL "
+						"text": "*Environment\t\t:* \t Dev "
 					],
 					[
 						"type": "mrkdwn",
@@ -60,11 +60,21 @@ def notifySlack(total,passed,failed){
 						"type": "button",
 						"text": [
 							"type": "plain_text",
-							"text": "Test Report"
+							"text": "Jenkins Test Stats"
 						],
 						"value": "click_me_123",
 						"action_id": "actionId-0",
-						"url": "https://www.google.com"
+						"url": "$BUILD_URL/artifact/xunitlog.xml"
+					],
+					[
+						"type": "button",
+						"text": [
+							"type": "plain_text",
+							"text": "rbf Test Report"
+						],
+						"value": "click_me_123",
+						"action_id": "actionId-0",
+						"url": "$BUILD_URL/artifact/xunitlog.xml"
 					]
 				]
 			]
@@ -88,6 +98,7 @@ pipeline {
 						def stats = junit 'xunitlog.xml'
 						notifySlack(stats.totalCount,stats.passCount,stats.failCount)
 					}
+					archiveArtifacts artifacts: '*.xml', fingerprint: true
 				}
 			}
 		}
