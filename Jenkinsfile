@@ -37,7 +37,7 @@ def notifySlack(total,passed,failed){
 				"fields": [
 					[
 						"type": "mrkdwn",
-						"text": "*Total Tests:* total"
+						"text": "*Total Tests:* $total"
 					],
 					[
 						"type": "mrkdwn",
@@ -45,11 +45,11 @@ def notifySlack(total,passed,failed){
 					],
 					[
 						"type": "mrkdwn",
-						"text": "*Passed:* passed"
+						"text": "*Passed:* $passed"
 					],
 					[
 						"type": "mrkdwn",
-						"text": "*Failed:* failed"
+						"text": "*Failed:* $failed"
 					]
 				]
 			],
