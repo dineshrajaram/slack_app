@@ -26,7 +26,7 @@ pipeline {
 					    "fields": [
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Environment\t\t:* \t '${env.BRANCH_NAME}' "
+							    "text": "*Environment\t\t:* \t $env.BRANCH_NAME "
 						    ],
 						    [
 							    "type": "mrkdwn",
@@ -34,11 +34,11 @@ pipeline {
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Number \t :*\t'${env.BUILD_NUMBER}'"
+							    "text": "*Build Number \t :*\t $env.BUILD_NUMBER"
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Duration\t:* \t '${currentBuild.duration}'"
+							    "text": "*Build Duration\t:* \t $currentBuild.duration"
 						    ]
 					    ]
 				    ],
