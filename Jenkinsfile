@@ -73,7 +73,7 @@ def notifySlack(total,passed,failed){
 							"text": "rbf Test Report"
 						],
 						"value": "click_me_123",
-						"action_id": "actionId-0",
+						"action_id": "actionId-1",
 						"url": "$BUILD_URL/artifact/xunitlog.xml"
 					]
 				]
