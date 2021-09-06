@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Dce-Automation" tests="1" errors="0" failures="0" skipped="0" time="5.887">
+<testcase classname="Dce-Automation.Tests.Develop" name="Create Pages to Delete or Publish" time="5.391">
+</testcase>
+</testsuite>
