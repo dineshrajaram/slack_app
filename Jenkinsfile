@@ -1,6 +1,3 @@
-def getDetails(){
-    return ["$env.RUN_TESTS_DISPLAY_URL","$env.BUILD_NUMBER","$currentBuild.durationString"]
-}
 def notifySlack(total,passed,failed){
 	blocks =
 		[
@@ -28,7 +25,7 @@ def notifySlack(total,passed,failed){
 					],
 					[
 						"type": "mrkdwn",
-						"text": "*Build Duration\t:* \t $currentBuild.durationString"
+						"text": "*Build Duration\t:* \t ${currentBuild.durationString.minus(' and counting')}"
 					]
 				]
 			],
