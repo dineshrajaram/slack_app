@@ -5,6 +5,9 @@ def setEnvironment(){
     return 'dev' 
   }
 }
+def getDetails(){
+	return ["$env.BRANCH_NAME","$env.BUILD_NUMBER","$currentBuild.duration"]
+}
 pipeline {
     agent any
     stages {
@@ -12,7 +15,7 @@ pipeline {
             steps {
 		    script {
 			    echo 'Hello'
-			    def env = setEnvironment()
+			    def env = getDetails()
 			    blocks = [
 				    [
 					    "type": "section",
@@ -26,7 +29,7 @@ pipeline {
 					    "fields": [
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Environment\t\t:* \t BRANCH_NAME "
+							    "text": "*Environment\t\t:* \t $env[0] "
 						    ],
 						    [
 							    "type": "mrkdwn",
@@ -34,11 +37,11 @@ pipeline {
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Number \t :*\t $env.BUILD_NUMBER"
+							    "text": "*Build Number \t :*\t $env[1]"
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Duration\t:* \t $currentBuild.duration"
+							    "text": "*Build Duration\t:* \t $env[2]"
 						    ]
 					    ]
 				    ],
