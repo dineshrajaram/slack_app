@@ -84,8 +84,10 @@ pipeline {
 			}
 			post {
 				always{
-					def stats = junit 'xunitlog.xml'
-					notifySlack(stats.totalCount,stats.passCount,stats.failCount)
+					script{
+						def stats = junit 'xunitlog.xml'
+						notifySlack(stats.totalCount,stats.passCount,stats.failCount)
+					}
 				}
 			}
 		}
