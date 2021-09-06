@@ -4,7 +4,7 @@ pipeline {
          stage("checkout SCM") {
             steps {
                 echo 'Hello'
-		def blocks = [
+		blocks = [
 			[
 				"type": "section",
 				"text": [
