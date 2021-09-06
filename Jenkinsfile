@@ -6,7 +6,7 @@ def setEnvironment(){
   }
 }
 def getDetails(){
-	return ["$env.BRANCH_NAME","$env.BUILD_NUMBER","$currentBuild.duration"]
+	return ["$env.RUN_TESTS_DISPLAY_URL","$env.BUILD_NUMBER","$currentBuild.durationString"]
 }
 pipeline {
     agent any
@@ -15,7 +15,7 @@ pipeline {
             steps {
 		    script {
 			    echo 'Hello'
-			    def env = getDetails()
+			    def (testURL,BN,BD) = getDetails()
 			    blocks = [
 				    [
 					    "type": "section",
@@ -29,7 +29,7 @@ pipeline {
 					    "fields": [
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Environment\t\t:* \t $env[0] "
+							    "text": "*Environment\t\t:* \t $testURL "
 						    ],
 						    [
 							    "type": "mrkdwn",
@@ -37,11 +37,11 @@ pipeline {
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Number \t :*\t $env[1]"
+							    "text": "*Build Number \t :*\t $BN"
 						    ],
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Build Duration\t:* \t $env[2]"
+							    "text": "*Build Duration\t:* \t $BD"
 						    ]
 					    ]
 				    ],
