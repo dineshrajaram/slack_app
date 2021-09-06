@@ -13,4 +13,6 @@
 </testcase>
 <testcase classname="Dce-Automation.Tests.Develop" name="test6" time="0.001">
 </testcase>
+<testcase classname="Dce-Automation.Tests.Develop" name="test7" time="0.001">
+</testcase>
 </testsuite>
