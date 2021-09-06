@@ -26,7 +26,7 @@ pipeline {
 					    "fields": [
 						    [
 							    "type": "mrkdwn",
-							    "text": "*Environment\t\t:* \t $env.BRANCH_NAME "
+							    "text": "*Environment\t\t:* \t BRANCH_NAME "
 						    ],
 						    [
 							    "type": "mrkdwn",
