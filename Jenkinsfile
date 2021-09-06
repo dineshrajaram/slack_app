@@ -76,7 +76,7 @@ def notifySlack(total,passed,failed){
 				]
 			]
 		]
-	slackSend(botUser: true, channel: '#test-automation;dce_qa', color: 'green', blocks: blocks , teamDomain: 'https://dineshworkspace-group.slack.com', tokenCredentialId: 'd9f15e7e-61af-4f92-a005-f00b6be4cb0a')
+	slackSend(botUser: true, channel: 'dce_qa', blocks: blocks , teamDomain: 'https://dnb-it.slack.com', tokenCredentialId: 'rbf-qa-bot')
 }
 pipeline {
 	agent any
