@@ -3,6 +3,7 @@
 <testcase classname="Dce-Automation.Tests.Develop" name="Test1" time="0.001">
 </testcase>
 <testcase classname="Dce-Automation.Tests.Develop" name="Test2" time="0.000">
+<testcase classname="Dce-Automation.Tests.Develop" name="Test4" time="0.000">
 <failure message="AssertionError" type="AssertionError"></failure>
 </testcase>
 <testcase classname="Dce-Automation.Tests.Develop" name="test3" time="0.001">
