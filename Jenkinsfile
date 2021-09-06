@@ -64,7 +64,7 @@ def notifySlack(total,passed,failed){
 						],
 						"value": "click_me_123",
 						"action_id": "actionId-0",
-						"url": "$BUILD_URL/artifact/xunitlog.xml"
+						"url": "$RUN_TESTS_DISPLAY_URL"
 					],
 					[
 						"type": "button",
