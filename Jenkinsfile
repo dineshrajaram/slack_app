@@ -94,9 +94,10 @@ pipeline {
 					script{
 						def stats = junit 'xunitlog.xml'
 						echo "$stats"
-						notifySlack(stats.totalCount,stats.passCount,stats.failCount)
+// 						notifySlack(stats.totalCount,stats.passCount,stats.failCount)
 					}
 					archiveArtifacts artifacts: '*.xml', fingerprint: true
+					archiveArtifacts artifacts: '*.html', fingerprint: true
 				}
 			}
 		}
