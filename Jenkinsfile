@@ -98,6 +98,7 @@ pipeline {
 // 					}
 					archiveArtifacts artifacts: '*.xml', fingerprint: true
 					archiveArtifacts artifacts: '*.html', fingerprint: true
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'log.html', reportName: 'HTML Report', reportTitles: ''])
 				}
 			}
 		}
